@@ -1,0 +1,51 @@
+/*CREATE TABLE dummy_rdata (
+	id SERIAL PRIMARY KEY,
+	a TEXT CHECK (char_length(a) < 6),
+	b TEXT CHECK (char_length(b) < 6),
+	moment DATE,
+	x NUMERIC(5,2));*/
+
+/*select * from dummy_rdata;*/
+
+/*drop table dummy_rdata;*/
+
+/*CREATE TABLE dummy_rdata (
+	id SERIAL PRIMARY KEY,
+	a TEXT UNIQUE NOT NULL CHECK (char_length(a) < 6),
+	b TEXT UNIQUE NOT NULL CHECK (char_length(b) < 6),
+	moment DATE  default '2020-01-01()',
+	x NUMERIC(5,2) CHECK (x > 0));*/
+
+/*INSERT INTO dummy_rdata VALUES
+(1, 'my_na','mine', DEFAULT, 30.33),
+(2, 'your','your1', DEFAULT, 80.23);*/
+
+/*INSERT INTO dummy_rdata VALUES
+(1, 'my_na','mine', DEFAULT, -23.33);*/
+
+/*INSERT INTO dummy_rdata VALUES
+(3, 'my_n','min', DEFAULT, 33.33);*/
+
+
+/*INSERT INTO dummy_rdata VALUES
+(4, 'my_nl','minkl', DEFAULT, 13.33);*/
+
+
+/*UPDATE dummy_rdata
+SET moment = '2020-03-01' 
+WHERE id = 3 or id = 4;*/
+
+/*UPDATE dummy_rdata
+SET moment  = '2020-01-01'
+WHERE id  = 3 or id = 4;*/
+
+/*ALTER TABLE dummy_rdata
+  ADD COLUMN "y" BOOLEAN NOT NULL DEFAULT FALSE;*/
+
+/*DELETE FROM dummy_rdata
+WHERE id = 2;*/
+
+/*drop table dummy_rdata*/
+
+
+
